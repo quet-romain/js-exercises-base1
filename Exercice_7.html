@@ -5,10 +5,26 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form>
-            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
-            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
-            <button id="valider" name="valider">Valider</button>
+        <form onsubmit="calcul()">
+            <label for="pointure">Pointure : </label><br/>
+            <input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><br/>
+            <input type="text" id="annee" name="annee"/><br/>
+            <button id="valider" name="valider" type="submit">Valider</button>
         </form>
+        <script>
+            function calcul() {
+                var pointure = document.getElementById("pointure").value;
+                var annee = document.getElementById("annee").value;
+                
+                var resultat = pointure * 2;
+                resultat = resultat + 5;
+                resultat = resultat * 50;
+                resultat = resultat - annee;
+                resultat = resultat + 1766;
+                
+                alert(resultat);
+            }
+        </script>
     </body>
 </html>

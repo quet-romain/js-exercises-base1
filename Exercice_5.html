@@ -5,10 +5,19 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form>
+        <form onsubmit="valid()">
             <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
             <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
-            <button  id="valider" name ="valider">Valider</button>
+            <button  id="valider" name ="valider" type="submit">Valider</button>
         </form>
+        <script>
+            function valid() {
+                var num1 = document.getElementById("premier_nombre").value;
+                var num2 = document.getElementById("deuxieme_nombre").value;
+                 var result = Math.floor(num1);
+                
+                alert(result * num2);
+            }
+        </script>
     </body>
 </html>
